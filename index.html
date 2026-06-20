@@ -11,8 +11,9 @@
       <div class="container header-inner">
         <a href="#home" class="logo">Green Shop</a>
         <nav class="nav">
-          <a href="#trees">Trees</a>
+          <a href="tree.html">Trees</a>
           <a href="#about">About</a>
+          <a href="account.html">Account</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -28,18 +29,53 @@
               Choose from fruit trees, shade trees, and bonsai varieties to add
               beauty, shade, and scent to your outdoor space.
             </p>
-            <a href="#trees" class="button">Shop trees</a>
+            <div class="hero-actions">
+              <a href="tree.html" class="button">Shop trees</a>
+              <a href="account.html" class="button button-secondary">Sign up</a>
+            </div>
           </div>
           <div class="hero-image">
             <div class="tree-card">
+              <img
+                src="https://placehold.co/600x400/7ea86e/ffffff?text=Oak+Tree"
+                alt="Oak tree"
+              />
               <span>Oak</span>
             </div>
             <div class="tree-card small-card">
+              <img
+                src="https://placehold.co/600x400/94c87f/ffffff?text=Lemon+Tree"
+                alt="Lemon tree"
+              />
               <span>Lemon</span>
             </div>
             <div class="tree-card small-card right-card">
+              <img
+                src="https://placehold.co/600x400/6e9f76/ffffff?text=Bonsai+Tree"
+                alt="Bonsai tree"
+              />
               <span>Bonsai</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="account" class="auth section">
+        <div class="container">
+          <div class="auth-card">
+            <div class="auth-intro">
+              <span class="eyebrow">Member access</span>
+              <h2>Sign in or sign up on the dedicated account page</h2>
+              <p>
+                Manage orders, save favorites, and get tree care tips by
+                visiting the account page.
+              </p>
+            </div>
+            <a href="account.html" class="button">Go to account page</a>
+            <p class="form-note">
+              Click the button to open the account page and sign in or create an
+              account.
+            </p>
           </div>
         </div>
       </section>
@@ -52,7 +88,11 @@
           </div>
           <div class="grid">
             <article class="product-card">
-              <div class="product-image fruit"></div>
+              <img
+                class="product-image fruit"
+                src="https://placehold.co/800x500/8bbf8f/ffffff?text=Fruit+Trees"
+                alt="Fruit tree selection"
+              />
               <h3>Fruit Trees</h3>
               <p>
                 Perfect for gardens and balconies. Enjoy fresh fruit from apple,
@@ -60,7 +100,11 @@
               </p>
             </article>
             <article class="product-card">
-              <div class="product-image shade"></div>
+              <img
+                class="product-image shade"
+                src="https://placehold.co/800x500/95c3a6/ffffff?text=Shade+Trees"
+                alt="Shade tree in a yard"
+              />
               <h3>Shade Trees</h3>
               <p>
                 Bring cooling shade to your yard with oak, maple, and palm trees
@@ -68,7 +112,11 @@
               </p>
             </article>
             <article class="product-card">
-              <div class="product-image bonsai"></div>
+              <img
+                class="product-image bonsai"
+                src="https://placehold.co/800x500/7ab584/ffffff?text=Bonsai+Trees"
+                alt="Bonsai tree"
+              />
               <h3>Bonsai Trees</h3>
               <p>
                 Compact and elegant bonsai trees for indoor décor or meditation
@@ -137,5 +185,6 @@
         <p>© 2026 Green Shop. All rights reserved.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

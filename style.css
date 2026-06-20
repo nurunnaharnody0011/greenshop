@@ -148,7 +148,25 @@ a {
   font-weight: 700;
   color: #2d4f2d;
   position: relative;
+  overflow: hidden;
   box-shadow: 0 20px 50px rgba(63, 98, 63, 0.08);
+}
+
+.tree-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tree-card span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #21401f;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
 }
 
 .small-card {
@@ -168,6 +186,122 @@ a {
   font-size: clamp(2rem, 3vw, 2.75rem);
 }
 
+.auth-card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 60px rgba(25, 71, 25, 0.08);
+}
+
+.auth-intro {
+  max-width: 40rem;
+}
+
+.auth-intro p {
+  margin: 1rem 0 0;
+  color: #3e533e;
+}
+
+.auth-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  border-radius: 1.5rem;
+  background: #eef7ea;
+  overflow: hidden;
+}
+
+.auth-switcher input {
+  display: none;
+}
+
+.auth-switcher .tab {
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 700;
+  color: #5c7e5c;
+  cursor: pointer;
+  background: #eef7ea;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+#signin:checked ~ .auth-switcher label[for="signin"],
+#signup:checked ~ .auth-switcher label[for="signup"] {
+  background: #ffffff;
+  color: #2d4f2d;
+}
+
+.auth-forms {
+  background: #f6fbf4;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.auth-form {
+  display: none;
+  gap: 1rem;
+}
+
+.auth-form.active {
+  display: grid;
+}
+
+#signin:checked ~ .auth-forms .sign-in,
+#signup:checked ~ .auth-forms .sign-up {
+  display: grid;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #315131;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #c8dcc4;
+  border-radius: 1rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+.form-group input:focus {
+  outline: 2px solid #7cade0;
+  outline-offset: 2px;
+}
+
+.form-note {
+  margin: 1rem 0 0;
+  color: #4b624b;
+}
+
+.form-message {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+  min-height: 1.25rem;
+}
+
+.form-message.success {
+  color: #276a24;
+}
+
+.form-message.error {
+  color: #9d2d2d;
+}
+
+.auth-card button {
+  width: fit-content;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -183,23 +317,25 @@ a {
 }
 
 .product-image {
-  height: 11rem;
+  width: 100%;
+  min-height: 11rem;
   border-radius: 1.2rem;
   margin-bottom: 1.25rem;
-  background-size: cover;
-  background-position: center;
+  display: block;
+  object-fit: cover;
+  background: #e8f0e4;
 }
 
 .product-image.fruit {
-  background: linear-gradient(180deg, #ffeed6 0%, #d3f2cd 100%);
+  background: #f7f0e3;
 }
 
 .product-image.shade {
-  background: linear-gradient(180deg, #dbe7f8 0%, #e8f2dc 100%);
+  background: #e9f3e7;
 }
 
 .product-image.bonsai {
-  background: linear-gradient(180deg, #f6e8d6 0%, #dde8d9 100%);
+  background: #f4efe7;
 }
 
 .product-card h3 {
@@ -288,8 +424,22 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero-image {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 0 2rem;
   }
 }
 

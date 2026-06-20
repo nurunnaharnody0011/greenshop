@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account | Green Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">Green Shop</a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="tree.html">Trees</a>
+          <a href="account.html">Account</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth section">
+        <div class="container">
+          <div class="auth-card">
+            <div class="auth-intro">
+              <span class="eyebrow">Member access</span>
+              <h2>Sign in or create your account</h2>
+              <p>
+                Use the form below to access your account or register a new one.
+              </p>
+            </div>
+
+            <input type="radio" id="signin" name="auth" checked />
+            <input type="radio" id="signup" name="auth" />
+            <div class="auth-switcher">
+              <label for="signin" class="tab">Sign in</label>
+              <label for="signup" class="tab">Sign up</label>
+            </div>
+
+            <div class="auth-forms">
+              <form class="auth-form sign-in">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+                <button type="submit" class="button">Sign in</button>
+                <p class="form-message" aria-live="polite"></p>
+                <p class="form-note">
+                  New here? Select "Sign up" to create a new account.
+                </p>
+              </form>
+
+              <form class="auth-form sign-up">
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <input id="name" type="text" placeholder="Your name" />
+                </div>
+                <div class="form-group">
+                  <label for="new-email">Email address</label>
+                  <input
+                    id="new-email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="new-password">Create password</label>
+                  <input
+                    id="new-password"
+                    type="password"
+                    placeholder="Choose a password"
+                  />
+                </div>
+                <button type="submit" class="button">Create account</button>
+                <p class="form-message" aria-live="polite"></p>
+                <p class="form-note">
+                  You’ll get personalized tree recommendations and order
+                  updates.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container contact-card">
+          <div>
+            <span class="eyebrow">Need support?</span>
+            <h2>Need help with your account?</h2>
+            <p>Contact us for login help, orders, or planting advice.</p>
+          </div>
+          <a
+            href="mailto:hello@greenshop.example"
+            class="button button-secondary"
+            >Email support</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Green Shop. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
