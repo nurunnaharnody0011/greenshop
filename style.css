@@ -358,12 +358,90 @@ a {
 
 .product-image {
   width: 100%;
-  min-height: 11rem;
+  height: 180px;
   border-radius: 1.2rem;
   margin-bottom: 1.25rem;
   display: block;
   object-fit: cover;
   background: #e8f0e4;
+}
+
+.product-card .button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button-buy {
+  background: #3b7d3f;
+  color: white;
+  border: none;
+  padding: 0.95rem 1rem;
+}
+
+.button-buy:hover {
+  background: #2f6b31;
+}
+
+.button-buy:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+}
+
+.image-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 15, 10, 0.8);
+  display: none;
+  place-items: center;
+  z-index: 999;
+  padding: 1.5rem;
+}
+
+.image-viewer-overlay.active {
+  display: grid;
+}
+
+.image-viewer-dialog {
+  width: min(100%, 940px);
+  max-height: 92vh;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.24);
+}
+
+.image-viewer-img {
+  width: 100%;
+  max-height: calc(92vh - 5rem);
+  object-fit: contain;
+  background: #111;
+  display: block;
+}
+
+.image-viewer-caption {
+  padding: 1rem 1.25rem 1.5rem;
+  color: #2a3d23;
+  font-weight: 700;
+  text-align: center;
+}
+
+.image-viewer-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f8faf7;
+  border: 1px solid rgba(74, 95, 74, 0.18);
+  color: #263b24;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.image-viewer-close:hover {
+  background: #ffffff;
 }
 
 .product-image.fruit {
