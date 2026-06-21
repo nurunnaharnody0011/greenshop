@@ -22,75 +22,96 @@
     <main>
       <section class="auth section">
         <div class="container">
-          <div class="auth-card">
-            <div class="auth-intro">
-              <span class="eyebrow">Member access</span>
-              <h2>Sign in or create your account</h2>
-              <p>
-                Use the form below to access your account or register a new one.
-              </p>
+          <div class="auth-card split">
+            <div class="auth-side auth-welcome">
+              <div class="welcome-inner">
+                <span class="eyebrow">Welcome back</span>
+                <h2>Grow your garden with Green Shop</h2>
+                <p>
+                  Sign in to manage orders, track deliveries, and receive
+                  personalized recommendations.
+                </p>
+                <img
+                  src="plant1.png"
+                  alt="Healthy potted plant"
+                  class="welcome-ill"
+                />
+              </div>
             </div>
 
-            <input type="radio" id="signin" name="auth" checked />
-            <input type="radio" id="signup" name="auth" />
-            <div class="auth-switcher">
-              <label for="signin" class="tab">Sign in</label>
-              <label for="signup" class="tab">Sign up</label>
-            </div>
+            <div class="auth-side auth-form-side">
+              <div class="form-wrapper">
+                <div class="social-row">
+                  <button class="button social google">
+                    Continue with Google
+                  </button>
+                  <button class="button social apple">
+                    Continue with Apple
+                  </button>
+                </div>
 
-            <div class="auth-forms">
-              <form class="auth-form sign-in">
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="you@example.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input
-                    id="password"
-                    type="password"
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <button type="submit" class="button">Sign in</button>
-                <p class="form-message" aria-live="polite"></p>
-                <p class="form-note">
-                  New here? Select "Sign up" to create a new account.
-                </p>
-              </form>
+                <div class="divider"><span>or</span></div>
 
-              <form class="auth-form sign-up">
-                <div class="form-group">
-                  <label for="name">Full name</label>
-                  <input id="name" type="text" placeholder="Your name" />
-                </div>
-                <div class="form-group">
-                  <label for="new-email">Email address</label>
-                  <input
-                    id="new-email"
-                    type="email"
-                    placeholder="you@example.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="new-password">Create password</label>
-                  <input
-                    id="new-password"
-                    type="password"
-                    placeholder="Choose a password"
-                  />
-                </div>
-                <button type="submit" class="button">Create account</button>
-                <p class="form-message" aria-live="polite"></p>
-                <p class="form-note">
-                  You’ll get personalized tree recommendations and order
-                  updates.
-                </p>
-              </form>
+                <form
+                  class="auth-form sign-in"
+                  aria-labelledby="signin-heading"
+                >
+                  <h3 id="signin-heading">Sign in</h3>
+                  <label class="field">
+                    <span class="label">Email</span>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="you@example.com"
+                    />
+                  </label>
+                  <label class="field">
+                    <span class="label">Password</span>
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="••••••••"
+                    />
+                  </label>
+                  <div class="form-actions">
+                    <label class="remember"
+                      ><input type="checkbox" /> Remember me</label
+                    >
+                    <a href="#" class="forgot">Forgot?</a>
+                  </div>
+                  <button type="submit" class="button primary">Sign in</button>
+                  <p class="form-note">
+                    New here? <a href="#signup">Create an account</a>.
+                  </p>
+                </form>
+
+                <form class="auth-form sign-up" aria-hidden="true">
+                  <h3>Create account</h3>
+                  <label class="field">
+                    <span class="label">Full name</span>
+                    <input id="name" type="text" placeholder="Your name" />
+                  </label>
+                  <label class="field">
+                    <span class="label">Email</span>
+                    <input
+                      id="new-email"
+                      type="email"
+                      placeholder="you@example.com"
+                    />
+                  </label>
+                  <label class="field">
+                    <span class="label">Password</span>
+                    <input
+                      id="new-password"
+                      type="password"
+                      placeholder="Create a password"
+                    />
+                  </label>
+                  <button type="submit" class="button primary">
+                    Create account
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
