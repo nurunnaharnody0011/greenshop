@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Green Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">Green Shop</a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="tree.html">Trees</a>
+          <a href="cart.html">Cart</a>
+          <a href="account.html">Account</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Shopping cart</span>
+            <h2>Your selected trees</h2>
+            <p class="section-description">
+              Review the plants you've picked and prepare for a greener home.
+            </p>
+          </div>
+
+          <div class="cart-page">
+            <div id="cartItems" class="cart-list"></div>
+            <div class="cart-summary">
+              <div class="summary-card">
+                <h3>Order summary</h3>
+                <p>Total</p>
+                <p class="summary-total">$<span id="cartTotal">0.00</span></p>
+                <a href="tree.html" class="button">Continue shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Green Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

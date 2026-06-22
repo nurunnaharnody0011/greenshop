@@ -50,21 +50,91 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const CART_KEY = "greenshopCart";
+
+  function getCart() {
+    return JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  }
+
+  function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "cart-toast";
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add("visible"));
+    setTimeout(() => {
+      toast.classList.remove("visible");
+      toast.addEventListener("transitionend", () => toast.remove(), {
+        once: true,
+      });
+    }, 2200);
+  }
+
+  function addToCart(item) {
+    const cart = getCart();
+    cart.push(item);
+    saveCart(cart);
+    showToast(`Added ${item.name} to cart`);
+  }
+
+  function renderCartPage() {
+    const cartList = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+    if (!cartList || !cartTotal) return;
+
+    const cart = getCart();
+    cartList.innerHTML = "";
+
+    if (!cart.length) {
+      cartList.innerHTML =
+        '<div class="cart-empty"><p>Your cart is empty. Add a tree to get started.</p></div>';
+      cartTotal.textContent = "0.00";
+      return;
+    }
+
+    let total = 0;
+    cart.forEach((item, index) => {
+      const itemPrice = parseFloat(item.price.replace(/[^0-9.]/g, "") || "0");
+      total += itemPrice;
+
+      const row = document.createElement("div");
+      row.className = "cart-item";
+      row.innerHTML = `
+        <div class="cart-item-image">
+          <img src="${item.image}" alt="${item.name}" />
+        </div>
+        <div class="cart-item-info">
+          <h3>${item.name}</h3>
+          <p class="price">${item.price}</p>
+        </div>
+      `;
+      cartList.appendChild(row);
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+  }
+
   document.querySelectorAll(".product-card").forEach((card) => {
     const title = card.querySelector("h3")?.textContent.trim() || "Plant";
     const price = card.querySelector(".price")?.textContent.trim() || "";
-    const buyButton = document.createElement("a");
+    const image = card.querySelector(".product-image")?.src || "";
+    const buyButton = document.createElement("button");
+    buyButton.type = "button";
     buyButton.className = "button button-buy";
-    buyButton.href = `mailto:hello@greenshop.example?subject=Purchase%20request%20for%20${encodeURIComponent(
-      title,
-    )}&body=I%20would%20like%20to%20buy%20${encodeURIComponent(
-      title,
-    )}%20${encodeURIComponent(price)}.`;
-    buyButton.target = "_blank";
-    buyButton.rel = "noopener noreferrer";
     buyButton.textContent = "Buy";
+
+    buyButton.addEventListener("click", () => {
+      addToCart({ name: title, price, image });
+    });
+
     card.appendChild(buyButton);
   });
+
+  renderCartPage();
 
   if (signinForm) {
     signinForm.addEventListener("submit", (event) => {

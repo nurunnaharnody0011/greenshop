@@ -13,6 +13,7 @@
         <nav class="nav">
           <a href="index.html">Home</a>
           <a href="tree.html">Trees</a>
+          <a href="cart.html">Cart</a>
           <a href="account.html">Account</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -31,11 +32,6 @@
                   Sign in to manage orders, track deliveries, and receive
                   personalized recommendations.
                 </p>
-                <img
-                  src="plant1.png"
-                  alt="Healthy potted plant"
-                  class="welcome-ill"
-                />
               </div>
             </div>
 
@@ -73,19 +69,13 @@
                       placeholder="••••••••"
                     />
                   </label>
-                  <div class="form-actions">
-                    <label class="remember"
-                      ><input type="checkbox" /> Remember me</label
-                    >
-                    <a href="#" class="forgot">Forgot?</a>
-                  </div>
                   <button type="submit" class="button primary">Sign in</button>
                   <p class="form-note">
                     New here? <a href="#signup">Create an account</a>.
                   </p>
                 </form>
 
-                <form class="auth-form sign-up" aria-hidden="true">
+                <form id="signup" class="auth-form sign-up" aria-hidden="true">
                   <h3>Create account</h3>
                   <label class="field">
                     <span class="label">Full name</span>
@@ -138,6 +128,7 @@
         <p>© 2026 Green Shop. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
