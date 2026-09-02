@@ -1,5 +1,5 @@
 # 🌿 Green Shop
-Live demo: [[Greenshop][https://nurunnaharnody0011.github.io/greenshop/]]
+Live demo: [Green Shop][https://nurunnaharnody0011.github.io/greenshop/]
 
 > A responsive static storefront for browsing trees and plants, adding products to a cart, and exploring account forms.
 
