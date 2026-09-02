@@ -52,14 +52,6 @@ Its main purpose is to provide a simple, responsive shopping experience for pres
 - No external libraries, frameworks, APIs, or services
 - No package manager or build tool configuration
 
-## 📸 Screenshots
-
-Screenshots can be added here later. For example:
-
-```text
-<!-- Add screenshots or image links here -->
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
